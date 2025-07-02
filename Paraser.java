@@ -12,10 +12,11 @@ public class Paraser {
 
     public Token nextToken(){
     int i = 0;
+
     tokenliste.toFirst();
     tokenliste.getContent();
     tokenliste.next();
-
+//notiz; das wird so nicht klappen, da wir hier das erste skippen
     return tokenliste.getContent();
 
     }
