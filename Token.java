@@ -11,7 +11,7 @@ public class Token {
         this.wert = wert;
     }
     public String getWert(){
-
+      return wert;
     }
 
     public void setTyp(String typ) {
@@ -19,6 +19,6 @@ public class Token {
     }
 
     public String getTyp(){
-
+     return typ;
     }
 }
