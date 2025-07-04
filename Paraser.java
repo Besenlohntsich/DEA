@@ -55,7 +55,7 @@ public class Paraser {
 
     public boolean pruefeB() {
         //Wenn lu und Wert= ende
-        if (tokenliste.getContent().equals("lu") && tokenliste.getWert().equals("ende")) {
+        if (tokenliste.getContent().equals("lu") && tokenliste.getContent().getWert().equals("ende")) {
          return true;
         }
         fehler = true;

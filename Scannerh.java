@@ -1,12 +1,12 @@
 import utils.*;
-public class Scanner {
+public class Scannerh {
     private Token aktuellesToken;
     private boolean fehler;
     private String eingabe;
     private List tokenliste;
 
 
-    public Scanner(String eingabe, List<Token> Tokenlist) {
+    public Scannerh(String eingabe, List<Token> Tokenlist) {
         aktuellesToken = Tokenlist.getContent();
         this.tokenliste = Tokenlist;
         this.eingabe = eingabe;

@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Analyse {
 
     private List<Token> tokenliste;
-    private Scanner scanner;
-    private Parser parser;
+    private Scannerh scanner;
+    private Paraser parser;
     private String eingabe;
 
     public static void main(String[] args) {
@@ -17,19 +17,19 @@ public class Analyse {
 
     }
 
-    public Analyse(String eingabe) {
-        this.eingabe = eingabe;
-        tokenliste=new List<>();
-        scanner=new Scannerh(eingabe,tokenliste);
-        parsser=new Parser(tokenliste);
-        analysiere();
+    public Analyse(String peingabe) {
+        eingabe = peingabe;
+        tokenliste = new List<>();
+        scanner = new Scannerh(eingabe,tokenliste);
+        parser = new Paraser(scanner.getTokenliste());
+        Analysiere();
 
     }
-    public void Analysieren()
+    public void Analysiere()
     {
-        scanne();
+        scanner.scanne();
         if(!tokenliste.isEmpty()) {
-            parase();
+            parser.parase();
         }
     }
 
