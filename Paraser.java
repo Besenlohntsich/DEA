@@ -5,7 +5,7 @@ public class Paraser {
     private List<Token> tokenliste;
     private Token aktuellesToken;
 
-    public Paraser(List<Token>Tokenlist){
+    public Paraser(List<Token>tokenlist){
         fehler = false;
      this.tokenliste = tokenliste;
     }
@@ -22,7 +22,7 @@ public class Paraser {
     }
 
     public boolean parase(){
-    if(tokenliste.hasAccess())
+    if(!tokenliste.isEmpty())
     {
         pruefeA();
         return true;

@@ -4,7 +4,8 @@ public class Token {
     private String typ;
 
     public Token(String pWert,String pTyp){
-
+        this.wert = pWert;
+        this.typ = pTyp;
     }
 
     public void setWert(String wert) {
