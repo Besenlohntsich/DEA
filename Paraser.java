@@ -15,7 +15,7 @@ public class Paraser {
     tokenliste.next();
 
 
-//notiz; das wird so nicht klappen, da wir hier das erste skippen
+
     return tokenliste.getContent();
 
     }
@@ -23,11 +23,12 @@ public class Paraser {
     public boolean parase(){
     if(tokenliste!=null)
     {
-        pruefeA();
+        pruefeS();
         return true;
     }else {
 
    fehler=true;
+   System.out.println("nein");
         return false;
     }
 
@@ -35,6 +36,7 @@ public class Paraser {
 
 
     public boolean pruefeS(){
+        System.out.println("S wird geprüft");
         if(tokenliste.getContent().equals("la")|| tokenliste.getContent().equals("le") || tokenliste.getContent().equals("lu")){
            pruefeA();
 
@@ -43,6 +45,7 @@ public class Paraser {
         return false;
     }
     public boolean pruefeA(){
+        System.out.println("A wird geprüft");
         if(tokenliste.getContent().equals("la")|| tokenliste.getContent().equals("le") || tokenliste.getContent().equals("lu")){
             pruefeB();
 
