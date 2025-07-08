@@ -11,18 +11,17 @@ public class Paraser {
     }
 
     public Token nextToken(){
-    int i = 0;
-
-    tokenliste.toFirst();
-    tokenliste.getContent();
+    Token t = tokenliste.getContent();
     tokenliste.next();
+
+
 //notiz; das wird so nicht klappen, da wir hier das erste skippen
     return tokenliste.getContent();
 
     }
 
     public boolean parase(){
-    if(!tokenliste.isEmpty())
+    if(tokenliste!=null)
     {
         pruefeA();
         return true;

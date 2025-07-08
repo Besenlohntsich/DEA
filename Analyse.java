@@ -28,8 +28,10 @@ public class Analyse {
     public void Analysiere()
     {
         scanner.scanne();
-        if(!tokenliste.isEmpty()) {
+        if(tokenliste!=null) {
+         System.out.println("parser");
             parser.parase();
+
         }
     }
 

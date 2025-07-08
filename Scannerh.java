@@ -16,39 +16,26 @@ public class Scannerh {
     public void scanne() {
 
         int i;
-        for (i = 0; i < eingabe.length(); i += 2)
-        {
+        for (i = 0; i < eingabe.length(); i += 2) {
             // Prüfe, ob noch mindestens 2 Zeichen übrig sind
             if (i + 2 <= eingabe.length()) {
                 String ZweiBuchstaben = eingabe.substring(i, i + 2);
 
-                if (ZweiBuchstaben.equals("la")|| ZweiBuchstaben.equals("le") || ZweiBuchstaben.equals("lu"))
-                {
+                if (ZweiBuchstaben.equals("la") || ZweiBuchstaben.equals("le") || ZweiBuchstaben.equals("lu")) {
                     tokenliste.append(new Token("Wort", ZweiBuchstaben));
                     //"WORT" der Typ des Tokens ist, der angibt, welche Art von Token es ist (hier ein gültiges Wort der
                     // Grammatik, z.B. "la", "le", "lu").
+                    System.out.println("1. trift zu"); //= funktioniert
                     //ZweiBuchstaben der Wert des Tokens ist, also der tatsächliche Text aus der Eingabe, der diesem Token entspricht.
-
 
                 } else {
                     fehler = true;
                     ausgabe(fehler);
-                    return;
                 }
 
-            }else {
-                // Restliche Zeichen sind weniger als 2 -> Fehler
-                fehler = true;
-                ausgabe(fehler);
-                return;
-            }
-            }
 
-        if(!fehler)
-        {
-         tokenliste.append(new Token("Ende",""));
-
-        }
+            }
+        }ausgabe(fehler);
     }
 
 
